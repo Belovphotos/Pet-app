@@ -1,0 +1,4 @@
+rootProject.name = 'pet-application'
+include 'pet-service'
+include 'common'
+
