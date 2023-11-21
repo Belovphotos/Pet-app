@@ -9,13 +9,7 @@ import java.io.Serializable;
 import java.util.Optional;
 @NoRepositoryBean
 public interface JpaBaseRepository<T, ID extends Serializable> extends JpaRepository<T, ID> {
-
-    default Page<T> findAll(Pageable pageable){
-        return findAll(pageable);
-    }
-
-    @Override
-    default Optional<T> findById(ID id) {
+        default Optional<T> findEntityById(ID id) {
         return findById(id);
     }
 }

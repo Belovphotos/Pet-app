@@ -23,4 +23,6 @@ public interface PetService extends BaseService<PetEntity, PetDto> {
     Page<PetDto> findAllPageable(Pageable pageable);
 
     void saveAll(List<PetDto> entities);
+
+    List<PetDto> findAllPetsByOwner(UUID id);
 }

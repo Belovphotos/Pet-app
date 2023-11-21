@@ -13,9 +13,6 @@ import java.util.UUID;
 @Getter
 @Setter
 public class PetEntity extends BaseEntity {
-//    @Id
-//    @GeneratedValue
-//    private UUID id;
     private String name;
     private String animalKind;
     private String breed;
@@ -25,9 +22,7 @@ public class PetEntity extends BaseEntity {
     private String color;
     private LocalDate lastVisitDate;
     private LocalDate registrationDate;
-
-//    @PrePersist
-//    public void prePersist(){
-//        this.registrationDate = LocalDate.now();
-//    }
+    private UUID cheapId;
+    private UUID collarId;
+    private UUID ownerId;
 }

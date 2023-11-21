@@ -68,7 +68,7 @@ public class BaseServiceImpl<E extends BaseEntity, D extends BaseDto> implements
 
     @Override
     public D findById(UUID id) {
-        return translateUtils.toDto(repository.findById(id).orElse(null));
+        return translateUtils.toDto(repository.findEntityById(id).orElse(null));
     }
 
     @Override

@@ -12,7 +12,6 @@ import java.util.UUID;
 @Setter
 @Builder
 public class PetDto extends BaseDto {
-//    private UUID id;
     private String name;
     private String animalKind;
     private String breed;
@@ -20,6 +19,8 @@ public class PetDto extends BaseDto {
     private LocalDate birthDate;
     private Integer weight;
     private String color;
-//    private LocalDate lastVisitDate;
-    private LocalDate registrationDate;
+    private LocalDate lastVisitDate;
+    private UUID cheapId;
+    private UUID collarId;
+    private UUID ownerId;
 }
