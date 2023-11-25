@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.belov.base.entity.BaseEntity;
+import ru.common.entity.BaseEntity;
 @Entity
 @Table(catalog = "postgres", schema = "public", name = "owners")
 @AllArgsConstructor

@@ -16,7 +16,9 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
-
+ext {
+    nameModule = 'pet-service'
+}
 repositories {
     mavenCentral()
 }
@@ -30,7 +32,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'com.codiform', name: 'moo-core', version: '2.1.0'
     implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.2.0'
-
+    implementation project(':common')
 }
 
 

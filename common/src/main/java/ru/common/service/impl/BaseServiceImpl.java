@@ -1,15 +1,14 @@
-package ru.belov.base.service.impl;
+package ru.common.service.impl;
 
-import org.modelmapper.ModelMapper;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import ru.belov.base.dto.BaseDto;
-import ru.belov.base.entity.BaseEntity;
-import ru.belov.base.repository.JpaBaseRepository;
-import ru.belov.base.service.BaseService;
-import ru.belov.base.utils.TranslateUtils;
-import ru.belov.repository.PetRepository;
+import ru.common.dto.BaseDto;
+import ru.common.entity.BaseEntity;
+import ru.common.repository.JpaBaseRepository;
+import ru.common.service.BaseService;
+import ru.common.utils.TranslateUtils;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -17,7 +16,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
+@RequiredArgsConstructor
 public class BaseServiceImpl<E extends BaseEntity, D extends BaseDto> implements BaseService<E,D> {
 
     protected JpaBaseRepository<E, UUID> repository;

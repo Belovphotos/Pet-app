@@ -3,13 +3,11 @@ package ru.common.entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import ru.common.Identifiable;
+import jakarta.persistence.PrePersist;
+import lombok.*;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Objects;
 import java.util.UUID;
 
@@ -18,10 +16,12 @@ import java.util.UUID;
 @Getter
 @Setter
 @MappedSuperclass
-public abstract class BaseEntity implements Serializable, Identifiable {
+public abstract class BaseEntity implements Serializable {
     @Id
     @GeneratedValue
     protected UUID id;
+
+    protected LocalDate registrationDate;
 
     @Override
     public int hashCode() {
@@ -34,5 +34,10 @@ public abstract class BaseEntity implements Serializable, Identifiable {
         if (obj == null || getClass() != obj.getClass()) return false;
         BaseEntity entity = (BaseEntity) obj;
         return Objects.equals(id, entity.id);
+    }
+
+    @PrePersist
+    public void prePersist(){
+        this.registrationDate = LocalDate.now();
     }
 }

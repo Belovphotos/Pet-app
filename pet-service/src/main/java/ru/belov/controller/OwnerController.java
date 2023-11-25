@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.belov.base.controller.BaseController;
+import ru.common.controller.BaseController;
 import ru.belov.dto.owner.FullOwnerDto;
 import ru.belov.dto.owner.OwnerDto;
 import ru.belov.entity.OwnerEntity;

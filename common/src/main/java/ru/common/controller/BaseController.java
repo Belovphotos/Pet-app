@@ -1,4 +1,4 @@
-package ru.belov.base.controller;
+package ru.common.controller;
 
 import jakarta.annotation.Nonnull;
 import lombok.RequiredArgsConstructor;
@@ -7,10 +7,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
-import ru.belov.base.dto.BaseDto;
-import ru.belov.base.entity.BaseEntity;
-import ru.belov.base.service.BaseService;
+import ru.common.dto.BaseDto;
+import ru.common.entity.BaseEntity;
+import ru.common.service.BaseService;
 
 import java.util.List;
 import java.util.UUID;

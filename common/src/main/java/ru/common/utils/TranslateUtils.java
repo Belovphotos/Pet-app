@@ -1,7 +1,7 @@
-package ru.belov.base.utils;
+package ru.common.utils;
 
 import org.modelmapper.ModelMapper;
-import ru.belov.config.ModelMapperSingleton;
+import ru.common.config.ModelMapperSingleton;
 
 public class TranslateUtils<E, D>{
 

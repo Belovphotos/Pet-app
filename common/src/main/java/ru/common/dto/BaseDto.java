@@ -1,4 +1,4 @@
-package ru.belov.base.dto;
+package ru.common.dto;
 
 import com.codiform.moo.annotation.Optionality;
 import com.codiform.moo.annotation.Property;

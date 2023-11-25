@@ -2,7 +2,7 @@ package ru.belov.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import ru.belov.base.entity.BaseEntity;
+import ru.common.entity.BaseEntity;
 
 import java.time.LocalDate;
 import java.util.UUID;

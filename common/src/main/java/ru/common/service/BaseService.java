@@ -1,9 +1,9 @@
-package ru.belov.base.service;
+package ru.common.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import ru.belov.base.dto.BaseDto;
-import ru.belov.base.entity.BaseEntity;
+import ru.common.dto.BaseDto;
+import ru.common.entity.BaseEntity;
 
 import java.util.List;
 import java.util.UUID;

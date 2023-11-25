@@ -1,7 +1,7 @@
 package ru.belov.dto;
 
 import lombok.*;
-import ru.belov.base.dto.BaseDto;
+import ru.common.dto.BaseDto;
 
 import java.time.LocalDate;
 import java.util.UUID;

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.belov.base.dto.BaseDto;
+import ru.common.dto.BaseDto;
 @Getter
 @Setter
 @AllArgsConstructor

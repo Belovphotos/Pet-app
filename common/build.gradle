@@ -16,7 +16,9 @@ configurations {
         extendsFrom annotationProcessor
     }
 }
-
+ext {
+    nameModule = 'common'
+}
 repositories {
     mavenCentral()
 }
@@ -27,6 +29,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.2.0'
+    implementation group: 'com.codiform', name: 'moo-core', version: '2.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

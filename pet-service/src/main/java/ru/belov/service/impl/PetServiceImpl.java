@@ -3,7 +3,7 @@ package ru.belov.service.impl;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.belov.base.service.impl.BaseServiceImpl;
+import ru.common.service.impl.BaseServiceImpl;
 import ru.belov.dto.PetDto;
 import ru.belov.entity.PetEntity;
 import ru.belov.repository.PetRepository;

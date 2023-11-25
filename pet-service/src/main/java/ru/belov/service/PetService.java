@@ -2,7 +2,7 @@ package ru.belov.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import ru.belov.base.service.BaseService;
+import ru.common.service.BaseService;
 import ru.belov.dto.PetDto;
 import ru.belov.entity.PetEntity;
 

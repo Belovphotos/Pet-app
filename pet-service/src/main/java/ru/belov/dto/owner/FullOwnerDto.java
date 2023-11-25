@@ -1,16 +1,13 @@
 package ru.belov.dto.owner;
 
-import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.belov.dto.PetDto;
-import ru.belov.entity.PetEntity;
 
 import java.time.LocalDate;
 import java.util.Set;
-import java.util.UUID;
 @Getter
 @Setter
 @AllArgsConstructor

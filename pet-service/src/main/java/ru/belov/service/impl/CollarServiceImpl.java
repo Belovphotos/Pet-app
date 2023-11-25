@@ -2,7 +2,7 @@ package ru.belov.service.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.belov.base.service.impl.BaseServiceImpl;
+import ru.common.service.impl.BaseServiceImpl;
 import ru.belov.dto.CollarDto;
 import ru.belov.entity.CollarEntity;
 import ru.belov.repository.CollarRepository;

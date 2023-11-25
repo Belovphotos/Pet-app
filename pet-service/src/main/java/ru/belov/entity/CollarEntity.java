@@ -3,7 +3,7 @@ package ru.belov.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
-import ru.belov.base.entity.BaseEntity;
+import ru.common.entity.BaseEntity;
 
 import java.util.UUID;
 

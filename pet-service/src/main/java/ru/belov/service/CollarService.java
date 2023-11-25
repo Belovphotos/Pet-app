@@ -1,6 +1,6 @@
 package ru.belov.service;
 
-import ru.belov.base.service.BaseService;
+import ru.common.service.BaseService;
 import ru.belov.dto.CollarDto;
 import ru.belov.entity.CollarEntity;
 
