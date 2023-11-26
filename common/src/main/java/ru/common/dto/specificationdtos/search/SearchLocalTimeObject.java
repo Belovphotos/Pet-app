@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.atc.enums.SearchType;
+import ru.common.enums.SearchType;
 
 @Getter
 @Setter
