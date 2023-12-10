@@ -2,6 +2,7 @@ package ru.belov.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import ru.belov.filter.PetEntityFilter;
 import ru.common.service.BaseService;
 import ru.belov.dto.PetDto;
 import ru.belov.entity.PetEntity;
@@ -9,7 +10,7 @@ import ru.belov.entity.PetEntity;
 import java.util.List;
 import java.util.UUID;
 
-public interface PetService extends BaseService<PetEntity, PetDto> {
+public interface PetService extends BaseService<PetEntity, PetDto, PetEntityFilter> {
     UUID save(PetDto entity);
 
     PetDto findById(UUID id);

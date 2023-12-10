@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import ru.common.dto.BaseDto;
 import ru.common.entity.BaseEntity;
+import ru.common.filter.Filter;
 import ru.common.repository.JpaBaseRepository;
 import ru.common.service.BaseService;
 import ru.common.utils.TranslateUtils;
@@ -17,7 +18,7 @@ import java.util.NoSuchElementException;
 import java.util.UUID;
 import java.util.stream.Collectors;
 @RequiredArgsConstructor
-public class BaseServiceImpl<E extends BaseEntity, D extends BaseDto> implements BaseService<E,D> {
+public class BaseServiceImpl<E extends BaseEntity, D extends BaseDto, F extends Filter<E>> implements BaseService<E,D, F> {
 
     protected JpaBaseRepository<E, UUID> repository;
     private final TranslateUtils<E, D> translateUtils = new TranslateUtils<>((Class<D>) getGenericClassType(1), (Class<E>) getGenericClassType(0));
@@ -63,6 +64,11 @@ public class BaseServiceImpl<E extends BaseEntity, D extends BaseDto> implements
                 .stream()
                 .map(translateUtils::toDto)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public Page<D> findAllByFilter(F search, Pageable pageable) {
+        return null;
     }
 
     @Override

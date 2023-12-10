@@ -3,6 +3,7 @@ package ru.belov.service.impl;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.belov.filter.OwnerFilter;
 import ru.common.service.impl.BaseServiceImpl;
 import ru.belov.dto.PetDto;
 import ru.belov.dto.owner.FullOwnerDto;
@@ -18,7 +19,7 @@ import java.util.UUID;
 
 @Service
 @Transactional
-public class OwnerServiceImpl extends BaseServiceImpl<OwnerEntity, OwnerDto> implements OwnerService {
+public class OwnerServiceImpl extends BaseServiceImpl<OwnerEntity, OwnerDto, OwnerFilter> implements OwnerService {
     private final OwnerRepository ownerRepository;
     private final PetService petService;
     private final ModelMapper modelMapper;
@@ -31,7 +32,7 @@ public class OwnerServiceImpl extends BaseServiceImpl<OwnerEntity, OwnerDto> imp
     }
 
     @Override
-    public FullOwnerDto findAllOwnersWithPets(UUID ownerId) {
+    public FullOwnerDto findOwnersWithPets(UUID ownerId) {
         FullOwnerDto result;
         OwnerEntity owner = ownerRepository.findById(ownerId).orElse(null);
         if (owner != null){

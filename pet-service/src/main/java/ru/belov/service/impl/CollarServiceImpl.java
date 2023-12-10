@@ -2,6 +2,7 @@ package ru.belov.service.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.belov.filter.CollarFilter;
 import ru.common.service.impl.BaseServiceImpl;
 import ru.belov.dto.CollarDto;
 import ru.belov.entity.CollarEntity;
@@ -10,7 +11,7 @@ import ru.belov.service.CollarService;
 
 @Service
 @Transactional
-public class CollarServiceImpl extends BaseServiceImpl<CollarEntity, CollarDto> implements CollarService {
+public class CollarServiceImpl extends BaseServiceImpl<CollarEntity, CollarDto, CollarFilter> implements CollarService {
     private final CollarRepository collarRepository;
 
     public CollarServiceImpl(CollarRepository repository) {

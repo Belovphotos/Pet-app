@@ -3,6 +3,7 @@ package ru.belov.service.impl;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.belov.filter.PetEntityFilter;
 import ru.common.service.impl.BaseServiceImpl;
 import ru.belov.dto.PetDto;
 import ru.belov.entity.PetEntity;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Transactional
-public class PetServiceImpl extends BaseServiceImpl<PetEntity, PetDto> implements PetService {
+public class PetServiceImpl extends BaseServiceImpl<PetEntity, PetDto, PetEntityFilter> implements PetService {
     private final PetRepository petRepository;
     private final ModelMapper modelMapper;
 

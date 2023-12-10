@@ -9,14 +9,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.common.dto.BaseDto;
 import ru.common.entity.BaseEntity;
+import ru.common.filter.Filter;
 import ru.common.service.BaseService;
 
 import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
-public class BaseController<E extends BaseEntity, D extends BaseDto> {
-    protected final BaseService<E, D> baseService;
+public class BaseController<E extends BaseEntity, D extends BaseDto, F extends Filter<E>> {
+    protected final BaseService<E, D, F> baseService;
 
     @PostMapping("/find-all-pageable")
     public ResponseEntity<Page<D>> findAllPageable(Pageable pageable){
